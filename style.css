@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  background-color: #a680a7;
+  width: 100%;
+  height: 120vh;
+  overflow-x: hidden;
+}
+
+.informacoesPessoais,
+.catalogos,
+.sobre {
+  gap: 2rem;
+  width: 35rem;
+}
+.informacoesPessoais {
+  align-items: center;
+}
+.informacoesPessoais > img {
+  margin-top: 2rem;
+  object-fit: cover;
+  object-position: 0 -45px;
+  width: 100%;
+}
+
+.textos-pessoais {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.informacoesPessoais h2 {
+  text-align: start;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.informacoesPessoais p,
+.sobre p {
+  text-align: justify;
+  font-size: small;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.textos-catalogos,
+.textos-sobre {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.catalogos {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogos h3,
+.sobre h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.card-catalogo {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  min-width: 300px;
+  height: 100%;
+}
+
+.card-catalogo img {
+  width: 100%;
+}
+
+.card-catalogo p {
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.botao-faleComigo {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgb(232, 158, 255);
+  box-shadow: -3px 3px #626262;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.cards-catalogos {
+  display: flex;
+  gap: 3rem;
+  overflow-x: scroll;
+  align-items: center;
+}
+
+.cards-catalogos::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cards-catalogos::-webkit-scrollbar-track {
+  background: rgb(122, 12, 142);
+  border-radius: 20px;
+}
+
+.cards-catalogos::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 5px solid rgba(255, 255, 255, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  background-color: #fff;
+  padding: 0.5rem 0;
+}
+
+.menu-hamburguer {
+  background-color: #de92db;
+  padding: 20px;
+  overflow: hidden;
+  position: fixed;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.textos-pessoais a {
+  width: 200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .InformacoesPessoais {
+    width: 10rem;
+  }
+}
