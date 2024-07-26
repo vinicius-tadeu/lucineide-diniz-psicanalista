@@ -16,7 +16,8 @@ html {
 
 .informacoesPessoais,
 .catalogos,
-.sobre {
+.sobre,
+.duvidas-frequentes {
   gap: 2rem;
   width: 35rem;
 }
@@ -69,13 +70,15 @@ section {
   margin-top: 2rem;
 }
 
-.catalogos {
+.catalogos,
+.duvidas-frequentes {
   display: flex;
   flex-direction: column;
 }
 
 .catalogos h3,
-.sobre h3 {
+.sobre h3,
+.duvidas-frequentes h3 {
   text-align: center;
   width: 100%;
 }
@@ -136,7 +139,6 @@ section {
   border: 5px solid rgba(255, 255, 255, 0);
   background-color: rgb(255, 255, 255);
 }
-
 header {
   display: flex;
   align-items: center;
@@ -158,6 +160,32 @@ header {
 .textos-pessoais a {
   width: 200px;
   margin: 0 auto;
+}
+
+.corpofaq {
+  overflow: hidden;
+  height: 30px;
+}
+
+.corpofaq li {
+  display: inline-block;
+  position: relative;
+  padding-left: 10px;
+}
+.corpofaq li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 50%;
+  background: black;
+}
+
+.duvidas-frequentes {
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 600px) {
