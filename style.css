@@ -12,6 +12,7 @@ html {
   width: 100%;
   height: 120vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .informacoesPessoais,
@@ -82,6 +83,22 @@ section {
   text-align: center;
   width: 100%;
 }
+details {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.perguntas summary {
+  cursor: pointer;
+}
+
+.perguntas ul {
+  margin-left: 5%;
+}
 
 .card-catalogo {
   background-color: #ffffff;
@@ -123,6 +140,8 @@ section {
   gap: 3rem;
   overflow-x: scroll;
   align-items: center;
+  padding: 10px 0;
+  overflow-y: hidden;
 }
 
 .cards-catalogos::-webkit-scrollbar {
@@ -188,8 +207,199 @@ header {
   margin-bottom: 2rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Courier New", Courier, monospace;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: whitesmoke;
+  background-color: rgba(255, 92, 201, 0.4);
+}
+
+.menu-hamburger {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-hamburguer-elements {
+  display: flex;
+  width: 80%;
+  height: 10vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-hamburguer-elements li {
+  list-style: none;
+  font-size: 1.4rem;
+  margin: 2rem 0;
+  width: 100%;
+  height: 5%;
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+.menu-hamburguer-elements a {
+  color: white;
+  background-color: #ff30f850;
+  text-decoration: none;
+  width: 100%;
+  padding: 0 5%;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-hamburguer-elements a:hover {
+  color: rgba(255, 144, 237, 0.8);
+}
+
+/* BOTÃO MENU HAMBURGUER */
+.menu {
+  background-color: rgb(214, 161, 214);
+  width: 60px;
+  height: 60px;
+  margin: 1rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #fff;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  background: #ffff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before {
+  top: -10px;
+}
+
+.hamburguer:after {
+  bottom: -10px;
+}
+
+input {
+  display: none;
+}
+
+/* rotação dos elementos do span */
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+input:checked ~ .menu-hamburguer-elements {
+  left: 0;
+}
+
+.texto-faq {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+/* ATIVANDO O BOTÃO HAMBURGUER QUANDO O TAMANHO DA TELA ATINGIR 600PX */
 @media (max-width: 600px) {
-  .InformacoesPessoais {
-    width: 10rem;
+  header {
+    height: 20%;
+    background-color: rgb(166, 128, 167, 1);
+  }
+
+  .menu-hamburguer-elements a:hover {
+    color: rgb(214, 161, 214);
+  }
+
+  .menu-hamburger {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-self: flex-start;
+    overflow: auto;
+    z-index: 1;
+    color: white;
+    position: fixed;
+    top: 5%;
+  }
+
+  .menu-hamburguer-elements {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 131, 245, 0.39);
+    position: fixed;
+    left: -60%;
+    top: 0;
+
+    transition: left cubic-bezier(1, 0, 0, 1) 0.8s;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: -1;
+  }
+
+  .menu {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border: 1px white solid;
+  }
+  .informacoesPessoais img {
+    object-position: 50%;
+  }
+  .informacoesPessoais,
+  .sobre,
+  .catalogos,
+  .duvidas-frequentes {
+    width: 80%;
   }
 }

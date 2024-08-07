@@ -8,26 +8,41 @@
   </head>
   <body>
     <header>
-      <img
+      <!-- <img
         src="./src/Logo-Lucineide.jpeg"
         alt=""
         width="200rem"
         style="border-radius: 50%"
-      />
-      <div style="text-align: center">
-        <h2>LUCINEIDE DINIZ</h2>
-        <h2>Psicanalista</h2>
-      </div>
-      <div id="menu-hamburguer" class="menu-hamburguer" onclick="abrir()">
-        <ul>
-          <li>Home</li>
-          <li>O que buscar na Psicanálise?</li>
-          <li>Catálogos</li>
-          <li>FAQ</li>
+      /> -->
+      <nav class="menu-hamburger">
+        <input id="menu-hamburguer" type="checkbox" />
+        <label for="menu-hamburguer">
+          <div class="menu">
+            <span class="hamburguer"></span>
+          </div>
+        </label>
+
+        <ul class="menu-hamburguer-elements show">
+          <li>
+            <a href="#informacoesPessoais">Sobre mim</a>
+          </li>
+
+          <li>
+            <a href="#sobre">Sobre a Psicanálise</a>
+          </li>
+
+          <li>
+            <a href="#catalogos">Catálogos</a>
+          </li>
+
+          <li>
+            <a href="#duvidas-frequentes">FAQ</a>
+          </li>
         </ul>
-      </div>
+      </nav>
     </header>
-    <section class="informacoesPessoais">
+
+    <section id="informacoesPessoais" class="informacoesPessoais">
       <!-- Informações pessoais -->
       <img
         src="./src/Foto-Lucineide.jpeg"
@@ -48,7 +63,7 @@
         <a class="botao-faleComigo" href="#">Vamos conversar?</a>
       </div>
     </section>
-    <section class="sobre">
+    <section id="sobre" class="sobre">
       <!-- Sobre -->
       <div class="textos-sobre">
         <h3>O que buscar na Psicanálise?</h3>
@@ -71,7 +86,7 @@
       </div>
     </section>
 
-    <section class="catalogos">
+    <section id="catalogos" class="catalogos">
       <!-- Catálogo -->
       <div class="textos-catalogos">
         <h3>Catálogos</h3>
@@ -136,102 +151,74 @@
     </section>
 
     <!--FAQ-->
-    <section class="duvidas-frequentes">
+    <section id="duvidas-frequentes" class="duvidas-frequentes">
       <div class="textos-duvidas-frequentes">
-        <h3 style="margin-top: 2rem">FAQ</h3>
+        <h3 class="texto-faq" style="margin-top: 2rem">FAQ</h3>
       </div>
-      <!--PERGUNTA 1-->
-      <div class="corpofaq">
-        <div
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          <img
-            src="./src/play_arrow_filled.png"
-            alt="Seta do FAQ de perguntas"
-            width="30rem"
-          />
-          <h3 style="text-align: left">Você atende convênio?</h3>
-        </div>
-        <p>
-          Não realizo atendimentos pelo convênio, mas emito um recibo, para que
-          você possa solicitar o reembolso através do plano de saúde.
-        </p>
-      </div>
-      <!--PERGUNTA 2-->
-      <div class="corpofaq">
-        <div
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          <img
-            src="./src/play_arrow_filled.png"
-            alt="Seta do FAQ de perguntas"
-            width="30rem"
-          />
-          <h3 style="text-align: left">Qual o tempo de duração da sessão?</h3>
-        </div>
-        <p>As sessões tem duração de 60 minutos.</p>
-      </div>
-      <!--PERGUNTA 3-->
-      <div class="corpofaq">
-        <div
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          <img
-            src="./src/play_arrow_filled.png"
-            alt="Seta do FAQ de perguntas"
-            width="30rem"
-          />
-          <h3 style="text-align: left">Como funciona a Terapia de Casal?</h3>
-        </div>
-        <p>
-          A terapia de casal trabalha diversos temas da relação amorosa e
-          conjugal.
-        </p>
-        <ul>
-          <li>Comunicação do Casal</li>
+      <div class="perguntas">
+        <details>
+          <summary>Você atende convênio?</summary>
           <br />
-          <li>Projetos Futuros</li>
+          <p>
+            Não realizo atendimentos pelo convênio, mas emito um recibo, para
+            que você possa solicitar o reembolso através do plano de saúde.
+          </p>
+        </details>
+
+        <details>
+          <summary>Qual o tempo de duração da sessão?</summary>
           <br />
-          <li>Divisão de Tarefas</li>
+          <p>As sessões tem duração de 60 minutos.</p>
+        </details>
+
+        <details>
+          <summary>Como funciona a Terapia de Casal?</summary>
           <br />
-          <li>Criação dos filhos</li>
+          <p>
+            A terapia de casal trabalha diversos temas da relação amorosa e
+            conjugal.
+          </p>
           <br />
-          <li>Sexualidade</li>
+          <ul>
+            <li>Comunicação do Casal</li>
+            <br />
+            <li>Projetos Futuros</li>
+            <br />
+            <li>Divisão de Tarefas</li>
+            <br />
+            <li>Criação dos filhos</li>
+            <br />
+            <li>Sexualidade</li>
+            <br />
+            <li>Influências das famílias de origem</li>
+            <br />
+            <li>Ciúmes, infidelidade e inseguranças entre outros.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Como é a sessão on-line de casal?</summary>
           <br />
-          <li>Influências das famílias de origem</li>
+          <p>
+            Com o atendimento on-line não há limitação geográfica para
+            atendê-los.
+          </p>
           <br />
-          <li>Ciúmes, infidelidade e inseguranças entre outros.</li>
-        </ul>
-      </div>
-      <!--PERGUNTA 4-->
-      <div class="corpofaq">
-        <div
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          <img
-            src="./src/play_arrow_filled.png"
-            alt="Seta do FAQ de perguntas"
-            width="30rem"
-          />
-          <h3 style="text-align: left">Como é a sessão on-line de casal?</h3>
-        </div>
-        <p>
-          Com o atendimento on-line não há limitação geográfica para atendê-los.
-        </p>
-        <ul>
-          <li>Cada sessão tem duração de 1h.</li>
-          <br />
-          <li>
-            Os dois precisam estar presentes, exceto sessões específicas em que
-            fazemos individual.
-          </li>
-          <br />
-          <li>
-            Se possível o casal se conecta pela mesma câmera, senão cada um no
-            seu espaço.
-          </li>
-          <br />
-        </ul>
+          <ul>
+            <li>Cada sessão tem duração de 1h.</li>
+            <br />
+            <li>
+              Os dois precisam estar presentes, exceto sessões específicas em
+              que fazemos individual.
+            </li>
+            <br />
+            <li>
+              Se possível o casal se conecta pela mesma câmera, senão cada um no
+              seu espaço.
+            </li>
+            <br />
+          </ul>
+        </details>
       </div>
     </section>
     <script src="./script.js" />
