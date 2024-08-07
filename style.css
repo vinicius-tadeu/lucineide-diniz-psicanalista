@@ -99,7 +99,9 @@ details {
 .perguntas ul {
   margin-left: 5%;
 }
-
+.logo {
+  border-radius: 50%;
+}
 .card-catalogo {
   background-color: #ffffff;
   display: flex;
@@ -165,6 +167,9 @@ header {
   gap: 7rem;
   background-color: #fff;
   padding: 0.5rem 0;
+}
+header nav {
+  align-items: center;
 }
 
 .menu-hamburguer {
@@ -259,7 +264,6 @@ header {
 
 .menu-hamburguer-elements a {
   color: white;
-  background-color: #ff30f850;
   text-decoration: none;
   width: 100%;
   padding: 0 5%;
@@ -269,7 +273,7 @@ header {
 }
 
 .menu-hamburguer-elements a:hover {
-  color: rgba(255, 144, 237, 0.8);
+  color: rgba(116, 0, 96, 0.8);
 }
 
 /* BOTÃO MENU HAMBURGUER */
@@ -354,12 +358,13 @@ input:checked ~ .menu-hamburguer-elements {
   }
 
   .menu-hamburguer-elements a:hover {
-    color: rgb(214, 161, 214);
+    background-color: #ffffff94;
+    color: rgba(116, 0, 96, 0.8);
   }
 
   .menu-hamburger {
     display: flex;
-    width: auto;
+    width: 20%;
     flex-direction: column;
     align-self: flex-start;
     overflow: auto;
@@ -367,6 +372,8 @@ input:checked ~ .menu-hamburguer-elements {
     color: white;
     position: fixed;
     top: 5%;
+    left: 0;
+    overflow: hidden;
   }
 
   .menu-hamburguer-elements {
@@ -401,5 +408,8 @@ input:checked ~ .menu-hamburguer-elements {
   .catalogos,
   .duvidas-frequentes {
     width: 80%;
+  }
+  .logo {
+    width: 100%;
   }
 }
