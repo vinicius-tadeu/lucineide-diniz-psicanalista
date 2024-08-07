@@ -102,6 +102,20 @@ details {
 .logo {
   border-radius: 50%;
 }
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.logo-titulo h2 {
+  text-align: center;
+}
+
 .card-catalogo {
   background-color: #ffffff;
   display: flex;
@@ -371,8 +385,7 @@ input:checked ~ .menu-hamburguer-elements {
     z-index: 1;
     color: white;
     position: fixed;
-    top: 5%;
-    left: 0;
+    top: 0;
     overflow: hidden;
   }
 
@@ -400,7 +413,7 @@ input:checked ~ .menu-hamburguer-elements {
     width: 60px;
     border: 1px white solid;
   }
-  .informacoesPessoais img {
+  .informacoesPessoais .foto-lucineide {
     object-position: 50%;
   }
   .informacoesPessoais,
@@ -409,7 +422,7 @@ input:checked ~ .menu-hamburguer-elements {
   .duvidas-frequentes {
     width: 80%;
   }
-  .logo {
-    width: 100%;
+  .logo-titulo .logo {
+    width: 10rem !important;
   }
 }
